@@ -24,5 +24,4 @@ data class TextConfig(
                 else -> android.view.Gravity.CENTER
             }
         }
-
 }

@@ -62,19 +62,25 @@ class TooltipActivity : AppCompatActivity(), TipListener, View.OnClickListener {
 
         // This tip is shows the first time the sample app is loaded. Use a message that gives user
         // guide on how to use the sample app. Also try to showcase the ability of the app.
-        val initialGuideTex: CharSequence = Html.fromHtml("Click on the <a href='#'>Buttons</a> " +
-            "and the <a href='#'>Radio Buttons</a> bellow to test various tool tip configurations." +
-            "<br><br><font color='grey'><small>GOT IT</small></font>")
-        toolTipsManager.show(ToolTip(
-            anchorView = anchorView,
-            rootView = parentLayout,
-            align = mAlign,
-            position = ToolTip.POSITION_BELOW,
-            backgroundColor = Color.DKGRAY,
-            contentView = getTextView(TextConfig(
-                message = initialGuideTex,
-            ))
-        ))
+        val initialGuideTex: CharSequence = Html.fromHtml(
+            "Click on the <a href='#'>Buttons</a> " +
+                "and the <a href='#'>Radio Buttons</a> bellow to test various tool tip configurations." +
+                "<br><br><font color='grey'><small>GOT IT</small></font>"
+        )
+        toolTipsManager.show(
+            ToolTip(
+                anchorView = anchorView,
+                rootView = parentLayout,
+                align = mAlign,
+                position = ToolTip.POSITION_BELOW,
+                backgroundColor = Color.DKGRAY,
+                contentView = getTextView(
+                    TextConfig(
+                        message = initialGuideTex,
+                    )
+                )
+            )
+        )
     }
 
     override fun onTipDismissed(view: View?, anchorViewId: Int, byUser: Boolean) {
@@ -86,15 +92,19 @@ class TooltipActivity : AppCompatActivity(), TipListener, View.OnClickListener {
         when (view.id) {
             R.id.button_above -> {
                 toolTipsManager.findAndDismiss(anchorView)
-                toolTipsManager.show(ToolTip(
-                    anchorView = anchorView,
-                    rootView = parentLayout,
-                    align = mAlign,
-                    position = ToolTip.POSITION_ABOVE,
-                    contentView = getTextView(TextConfig(
-                        message = text
-                    ))
-                ))
+                toolTipsManager.show(
+                    ToolTip(
+                        anchorView = anchorView,
+                        rootView = parentLayout,
+                        align = mAlign,
+                        position = ToolTip.POSITION_ABOVE,
+                        contentView = getTextView(
+                            TextConfig(
+                                message = text
+                            )
+                        )
+                    )
+                )
             }
             R.id.button_below -> {
                 toolTipsManager.findAndDismiss(anchorView)
@@ -111,33 +121,41 @@ class TooltipActivity : AppCompatActivity(), TipListener, View.OnClickListener {
             }
             R.id.button_left_to -> {
                 toolTipsManager.findAndDismiss(anchorView)
-                toolTipsManager.show(ToolTip(
-                    anchorView = anchorView,
-                    rootView = parentLayout,
-                    align = mAlign,
-                    position = ToolTip.POSITION_LEFT_TO,
-                    backgroundColor = resources.getColor(R.color.colorLightGreen),
-                    contentView = getTextView(TextConfig(
-                        message = text,
-                        textAppearanceStyle = R.style.TooltipTextAppearance_Small_Black,
-                        textGravity = GRAVITY_CENTER
-                    ))
-                ))
+                toolTipsManager.show(
+                    ToolTip(
+                        anchorView = anchorView,
+                        rootView = parentLayout,
+                        align = mAlign,
+                        position = ToolTip.POSITION_LEFT_TO,
+                        backgroundColor = resources.getColor(R.color.colorLightGreen),
+                        contentView = getTextView(
+                            TextConfig(
+                                message = text,
+                                textAppearanceStyle = R.style.TooltipTextAppearance_Small_Black,
+                                textGravity = GRAVITY_CENTER
+                            )
+                        )
+                    )
+                )
             }
             R.id.button_right_to -> {
                 toolTipsManager.findAndDismiss(anchorView)
-                toolTipsManager.show(ToolTip(
-                    anchorView = anchorView,
-                    rootView = parentLayout,
-                    align = mAlign,
-                    position = ToolTip.POSITION_RIGHT_TO,
-                    backgroundColor = resources.getColor(R.color.colorDarkRed),
-                    contentView = getTextView(TextConfig(
-                        message = TIP_TEXT,
-                        textAppearanceStyle = R.style.TooltipTextAppearance_Large,
-                        textGravity = GRAVITY_CENTER
-                    ))
-                ))
+                toolTipsManager.show(
+                    ToolTip(
+                        anchorView = anchorView,
+                        rootView = parentLayout,
+                        align = mAlign,
+                        position = ToolTip.POSITION_RIGHT_TO,
+                        backgroundColor = resources.getColor(R.color.colorDarkRed),
+                        contentView = getTextView(
+                            TextConfig(
+                                message = TIP_TEXT,
+                                textAppearanceStyle = R.style.TooltipTextAppearance_Large,
+                                textGravity = GRAVITY_CENTER
+                            )
+                        )
+                    )
+                )
             }
             R.id.button_align_center -> mAlign = ALIGN_CENTER
             R.id.button_align_left -> mAlign = ToolTip.ALIGN_LEFT
