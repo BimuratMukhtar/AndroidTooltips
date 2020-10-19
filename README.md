@@ -7,7 +7,7 @@ Add tooltip near any other view with ease
 1. Add a dependency to your app build.gradle  
 ```groovy  
 dependencies {  
-	compile 'not available for now'
+	implementation 'kz.opensource.tooltips:tooltips:1.0.0'
 }  
 ```  
   
