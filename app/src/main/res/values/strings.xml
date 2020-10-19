@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Android Tooltips Demo</string>
+    <string name="text_long">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </string>
+    <string name="text_ok">OK</string>
+</resources>
