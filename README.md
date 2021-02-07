@@ -96,7 +96,7 @@ class TooltipActivity : AppCompatActivity(), TipListener, View.OnClickListener {
   
 ### License  
 ```  
-Copyright 2016 Tomer Goldstein  
+Copyright 2016 Bimurat Mukhtar 
   
 Licensed under the Apache License, Version 2.0 (the "License");  
 you may not use this file except in compliance with the License.  
